@@ -6,33 +6,28 @@
     <!-- ⑤スタイルシートの設定をしよう -->
     <!-- h1.htmlからある行をコピペしてくればOK -->
 </head><link rel="stylesheet" href="./css/style.css">
-<body>span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
-}
-<body>logo img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* 画像のトリミング */
-}
+<body>
 
-    <h1>見出し</h1>
+
+
+    <h2>ポイント</h2>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
     <div>
          <!-- ①↓に文字を書いてみよう -->
-hello</div>
-    デザイン演習<div>
+<div>
          <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
-<img src="./images/testimage.png" width="50%">
 <img src="../images/0_XBlogo.png" width="100">
-<img src="./images/IMG_4776.jpg" width="100%">
          <!-- ③↓に箇条書きをしてみよう -->
-          <ul>
-            <li>iiiiiiiiiiiiii</li>
-            <li>なんて日だ</li>
-          </ul>
+          <ol>
+            <div>元気ですか<div>
+            <li>headとbodyについて</li>
+            <li>タイトル</li>
+            <li>文字を書く</li>
+            <li>画像の貼り付け　（サイズ変更）</li>
+            <li>外部サイトのリンク貼り付け</li>
+            <li>外部サイトのリンク貼り付け　（動画）</li>
+
+          </ol>
                 <!-- ④↓に外部リンクを作ってみよう -->
 <a href="https://www.yahoo.co.jp/" target="_blank">Yahoo</a><br>
     <div>ヤフーのサイトです。<div>
