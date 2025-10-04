@@ -2,36 +2,57 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>よし</title>
+    <title>第1回のまとめ</title>
     <!-- ⑤スタイルシートの設定をしよう -->
     <!-- h1.htmlからある行をコピペしてくればOK -->
 </head><link rel="stylesheet" href="./css/style.css">
-<body>
 
+<h1>第1回のまとめ</h1>
 
+<h2>Gitについて</h2>
+<div></div>
 
-    <h2>ポイント</h2>
-    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-    <div>
-         <!-- ①↓に文字を書いてみよう -->
-<div>
-         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
-<img src="../images/0_XBlogo.png" width="100">
-         <!-- ③↓に箇条書きをしてみよう -->
-          <ol>
-            <li>headとbodyについて</li>
-            <li>タイトル</li>
-            <li>文字を書く</li>
-            <li>画像の貼り付け　（サイズ変更）</li>
-            <li>外部サイトのリンク貼り付け</li>
-            <li>外部サイトのリンク貼り付け　（動画）</li>
+<h2>htmlについて</h2>    
+<div>htmlとはHyper Text Markup Languageの略である<br>
+    文章やページにリンクを貼ることが可能であり、画像や動画にリンクすることができる。</div>
 
-          </ol>
-                <!-- ④↓に外部リンクを作ってみよう -->
-<a href="https://www.yahoo.co.jp/" target="_blank">Yahoo</a><br>
-    <div>ヤフーのサイトです。<div>
-<a href="./files/test.pdf" target="_blank">pdfファイル</a>
-<div>外部ファイルです<div>
-</body>
-</html>
-<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/Jjojd47bu-s?si=NvTOUp5U0sjJqOrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <h2>headとbodyについて</h2>
+    <div>htmlはheadとbodyに分かれており、headにはタイトルや設定を、<br>
+        bodyには文章や画像を入力します。</div>
+    <h2>文字を入力する</h2>
+
+    <li>タイトル</li>
+    <div>タイトルを書くときは<br>
+    ＜title＞タイトル名＜title＞ と入力する</div>
+    
+    <li>見出し</li>
+    <div>見出しを書くときは<br>
+    ＜h1＞見出し＜h1＞と入力する</div>
+    <div>※　見出しのサイズはh3,h2,h1の順で大きくなるため内容にあったサイズで使用するとよい</div>
+    
+    <li>文章</li> 
+    <div>文章を書くときは<br>
+    ＜div＞文章＜div＞と入力する</div>
+    
+    <li>箇条書き</li>
+    <div>箇条書きをするときは<br>
+    数字なしの場合　＜li＞文字＜li＞の前後を＜ul＞で括る<br>
+    数字ありの場合　＜li＞文字＜li＞の前後を＜ol＞で括る</div>
+    
+    <h2>画像の挿入</h2>   ]
+    <div>画像を挿入する場合は<br>
+    ＜img src="./選択した画像" ＞と入力する</div>
+    <div>※１　スマホで撮影した画像を利用する際はデータ量を小さくしたほうがよい。<br>
+         ※２　画像のサイズを変更する際は"選択した画像"の後に widthサイズ%と入力する。<br>
+         ※３　"./"の部分は貼り付けたいファイルによって"."の数を変更しなくてはならない。<br>
+        　　（ファイルが2つ目にある時は"../"と入力する）</div>
+    <h2>外部サイトのリンクを貼る</h2>
+    <div>外部リンクを貼る際は<br>
+    ＜a href="貼りたいリンク"target="_blank">のように入力する<br>
+    ※外部サイトの場合はそのことを明記する必要がある。</div>
+    <h2>YouTubeから動画を挿入する</h2>
+<div>YouTubeの動画を貼りたい場合は<br>
+    手順1　貼りたい動画のリンクを、共有→埋め込む→コピーの手順で行う<br>
+    手順2　＜div class="video"＞＜src="動画のURL"div＞のように入力する。</div>
+    <div>※１　サイズや幅を変更する場合は"width"、"height"の数値を変更する必要がある。<br>
+         ※２　動画の中には利用できないものもあるため注意する。</div>
