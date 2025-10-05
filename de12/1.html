@@ -1,59 +1,75 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <!-- ⑥↓タイトルを変えてみよう -->
-    <title>第1回のまとめ</title>
-    <!-- ⑤スタイルシートの設定をしよう -->
-    <!-- h1.htmlからある行をコピペしてくればOK -->
-</head><link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <title>第1回のまとめ</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
 
-<h1>第1回のまとめ</h1>
+<body class="about-page">
 
-<h2>Gitについて</h2>
-<div>Gitは「バージョン管理システム」のことであり、<br>
-コードの変更履歴を記録・管理できるツールである。</div>
+  <h1>第1回のまとめ</h1>
 
-<h2>htmlについて</h2>    
-<div>htmlとはHyper Text Markup Languageの略である<br>
+  <h2>Gitについて</h2>
+  <div>Gitは「バージョン管理システム」のことであり、<br>
+    コードの変更履歴を記録・管理できるツールである。</div>
+
+  <h2>htmlについて</h2>    
+  <div>htmlとはHyper Text Markup Languageの略である。<br>
     文章やページにリンクを貼ることが可能であり、画像や動画にリンクすることができる。</div>
 
-    <h2>headとbodyについて</h2>
-    <div>htmlはheadとbodyに分かれており、headにはタイトルや設定を、<br>
-        bodyには文章や画像を入力します。</div>
-    <h2>文字を入力する</h2>
+  <h2>headとbodyについて</h2>
+  <div>htmlはheadとbodyに分かれており、headにはタイトルや設定を、<br>
+    bodyには文章や画像を入力する</div>
 
+  <h2>文字を入力する</h2>
+  <ul>
     <li>タイトル</li>
-    <div>タイトルを書くときは<br>
-    ＜title＞タイトル名＜title＞ と入力する</div>
-    
+  </ul>
+  <div>タイトルを書くときは<br>
+    &lt;title&gt;タイトル名&lt;/title&gt; と入力する</div>
+
+  <ul>
     <li>見出し</li>
-    <div>見出しを書くときは<br>
-    ＜h1＞見出し＜h1＞と入力する</div>
-    <div>※　見出しのサイズはh3,h2,h1の順で大きくなるため内容にあったサイズで使用するとよい</div>
-    
-    <li>文章</li> 
-    <div>文章を書くときは<br>
-    ＜div＞文章＜div＞と入力する</div>
-    
+  </ul>
+  <div>見出しを書くときは<br>
+    &lt;h1&gt;見出し&lt;/h1&gt;と入力する</div>
+  <div>※ 見出しのサイズは数字が小さくなるにつれて大きくなる</div>
+
+  <ul>
+    <li>文章</li>
+  </ul>
+  <div>文章を書くときは<br>
+    &lt;div&gt;文章&lt;/div&gt;と入力する</div>
+
+  <ul>
     <li>箇条書き</li>
-    <div>箇条書きをするときは<br>
-    数字なしの場合　＜li＞文字＜li＞の前後を＜ul＞で括る<br>
-    数字ありの場合　＜li＞文字＜li＞の前後を＜ol＞で括る</div>
-    
-    <h2>画像の挿入</h2>   
-    <div>画像を挿入する場合は<br>
-    ＜img src="./選択した画像" ＞と入力する</div>
-    <div>※１　スマホで撮影した画像を利用する際はデータ量を小さくしたほうがよい。<br>
-         ※２　画像のサイズを変更する際は"選択した画像"の後に widthサイズ%と入力する。<br>
-         ※３　"./"の部分は貼り付けたいファイルによって"."の数を変更しなくてはならない。<br>
-        　　（ファイルが2つ目にある時は"../"と入力する）</div>
-    <h2>外部サイトのリンクを貼る</h2>
-    <div>外部リンクを貼る際は<br>
-    ＜a href="貼りたいリンク"target="_blank">のように入力する<br>
-    ※外部サイトの場合はそのことを明記する必要がある。</div>
-    <h2>YouTubeから動画を挿入する</h2>
-<div>YouTubeの動画を貼りたい場合は<br>
-    手順1　貼りたい動画のリンクを、共有→埋め込む→コピーの手順で行う<br>
-    手順2　＜div class="video"＞＜src="動画のURL"div＞のように入力する。</div>
-    <div>※１　サイズや幅を変更する場合は"width"、"height"の数値を変更する必要がある。<br>
-         ※２　動画の中には利用できないものもあるため注意する。</div>
+  </ul>
+  <div>箇条書きをするときは<br>
+    数字なし：&lt;ul&gt;で囲んだ中に&lt;li&gt;文字&lt;/li&gt;<br>
+    数字あり：&lt;ol&gt;で囲んだ中に&lt;li&gt;文字&lt;/li&gt;</div>
+
+  <h2>画像の挿入</h2>
+  <div>画像を挿入するには<br>
+    &lt;img src="./選択した画像" &gt;と入力する</div>
+  <div>※1 スマホで撮影した画像はデータ量を小さくする<br>
+    ※2 画像サイズを変更するには、imgタグに `width="○○%"` を付ける<br>
+    ※3 `./` の部分はファイルの階層によって変わる（`../`など）</div>
+
+  <h2>外部サイトのリンクを貼る</h2>
+  <div>リンクは<br>
+    &lt;a href="URL" target="_blank"&gt;リンク&lt;/a&gt;<br>
+    ※ 外部サイトだと分かるように明記する</div>
+
+  <h2>YouTubeから動画を挿入する</h2>
+  <div>YouTube動画を貼るには<br>
+    1. 「共有」→「埋め込む」→コードをコピー<br>
+    2. HTML内に貼り付ける<br>
+    ※ 利用できない動画もあるので注意</div>
+<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/L2hQRbvKjGE?si=dR7Z9-xLKpeNNuzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><</div>
+<div>kanagawaunivofficial参照</div>
+<div>こんな感じ！<div>
+</body>
+</html>
+
+        
