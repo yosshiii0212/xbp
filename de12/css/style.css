@@ -16,9 +16,8 @@ logotohome img{
 
 
 /* ========== common ========== */
-html, body. {
+body {
 	font-size: 16px;
-	font-family: sans-serif;
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
@@ -43,10 +42,7 @@ p{
 
 
 
-body.about-page {
-  background: linear-gradient(to right, #9fdcf5, #aef6a4);
-  text-align: left;
-}
+
 
 
 
