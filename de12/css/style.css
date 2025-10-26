@@ -40,6 +40,10 @@ p{
     margin-left: 3em;
 }
 
+body.about-page {
+    background: linear-gradient(to right, rgba(255, 253, 154, 0.5), rgba(170, 248, 187, 0.5));
+}
+
 
 
 
