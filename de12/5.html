@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>よしのAPI課題</title>
+    
+</head><link rel="stylesheet" href="./css/style.css">
+<body class="about-page">
+    <h2>架空のことわざ、慣用句Bot</h2>
+    <div>今回私はテーマを入力したらそのワードを使って架空のことわざや慣用句を<br>
+    言ってくれるアプリを作りました。以下がそのソースコードです。</div>
+    
+    <pre><code>Xfrom openai import OpenAI
+
+client = OpenAI(api_key="※APIキーを入力")
+#ここにテーマを入力
+a=input("テーマを入力：")
+b=input("テーマを入力：")
+c=input("テーマを入力：")
+question =a+ b+c+"3つのテーマを取り入れた架空の短いことわざ、もしくは慣用句を言って、またその意味も教えて"
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": question}]
+)
+#---------------------------------------
+
+print("AIの答え：", response.choices[0].message.content)</code></pre>
+
+<h3>結果は、、、</h3>
+<img src="../images/kekka1.png" width="70%">
+<img src="../images/kekka2.png" width="70%">
+<img src="../images/kekka3.png" width="70%">
+
+<div>3回実行すると<strong>1回だけ</strong>すべてのテーマを組み込んだことわざが完成した。<br>
+精度としてはいまいちであるがことわざ自体の完成度は案外いいのではないかと感じた。<br>
+上手くいかない日があったときに自分を励ますときに使うと良いかもしれない。</div>
+
+
+         
+</body>
