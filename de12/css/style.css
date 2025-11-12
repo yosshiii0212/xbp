@@ -101,7 +101,7 @@ header h1 {
 }
 
 /* ===== 見出し ===== */
-h2 {
+body.about-page h2 {
   border-left: 6px solid #b89465;
   padding-left: 10px;
   color: #444;
