@@ -65,6 +65,101 @@ body.about-page {
 }
 
 
+/* ===== 全体の基本設定 ===== */
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  background-color: #f7f6f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  background: linear-gradient(120deg, #f9f3e9, #eae2d6);
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 2px solid #d4c3a3;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #3b3b3b;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+/* ===== コンテナ ===== */
+.container {
+  max-width: 850px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== 見出し ===== */
+h2 {
+  border-left: 6px solid #b89465;
+  padding-left: 10px;
+  color: #444;
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+h3 {
+  color: #666;
+  margin-top: 30px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+/* ===== テキストブロック ===== */
+p, li, ol {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+ol, ul {
+  margin-left: 25px;
+}
+
+ul.result li {
+  margin-bottom: 10px;
+}
+
+/* ===== 画像 ===== */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.map {
+  width: 60%;
+}
+
+.chart {
+  width: 40%;
+}
+
+img:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+/* ===== フッター ===== */
+footer {
+  text-align: center;
+  color: #777;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 14px;
+  background-color: #f2f0ec;
+}
 
 
 
