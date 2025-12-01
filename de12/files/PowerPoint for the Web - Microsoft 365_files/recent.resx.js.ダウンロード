@@ -1,0 +1,6 @@
+"use strict";(self.odspNextWebpackJsonp=self.odspNextWebpackJsonp||[]).push([["recent.resx","file-browser.resx"],{451:e=>{e.exports=JSON.parse('{"b":"オンラインのときにのみ利用できます","a":"{0}。オフライン中は無効"}')}
+,545:e=>{e.exports=JSON.parse('{"a":"OneDrive アカウントがプロビジョニングされていません"}')}
+,566:e=>{e.exports=JSON.parse('{"a":"メイン コンテンツにスキップ"}')}
+,1387:e=>{e.exports=JSON.parse('{"a":"さらに表示"}')}
+,1115:e=>{e.exports=JSON.parse('{"b":"Copilot","a":"Copilot はオンラインの場合にのみ使用できます"}')}
+}]),define("recent.resx",[],{});
