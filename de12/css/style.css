@@ -161,6 +161,18 @@ footer {
   background-color: #f2f0ec;
 }
 
+.image-row {
+  display: flex;
+  gap: 16px;  /* 画像の間のスペース */
+  justify-content: center; /* 中央揃え（必要なら）*/
+}
+
+.image-row img {
+  width: 45%;  /* 2枚なら45%くらいにすると良い */
+  height: auto;
+  border-radius: 8px;
+}
+
 
 
 
