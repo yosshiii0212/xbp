@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>よし design for others</title>
+
+    <style>
+        /* ===== 全体のベース ===== */
+        body {
+            font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+            margin: 0;
+            background: linear-gradient(160deg, #e3f2fd, #f5f7fa);
+            color: #333;
+            line-height: 1.9;
+        }
+
+        /* ===== ヘッダー（曲線デザイン＋淡いグラデ） ===== */
+        header {
+            background: linear-gradient(135deg, #8ec5fc, #badaff);
+            padding: 90px 20px 120px;
+            text-align: center;
+            color: #fff;
+            border-bottom-left-radius: 50% 12%;
+            border-bottom-right-radius: 50% 12%;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.4rem;
+            margin: 0;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+            animation: fadeIn 1.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== コンテンツカード ===== */
+        .container {
+            max-width: 900px;
+            margin: -60px auto 40px;
+            padding: 40px 30px;
+            background: #ffffffee;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            backdrop-filter: blur(8px);
+        }
+
+        /* ===== 見出し ===== */
+        h2 {
+            margin-top: 60px;
+            font-size: 1.9rem;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            left: 0;
+            top: 0;
+            background: linear-gradient(#8ec5fc, #badaff);
+            border-radius: 10px;
+        }
+
+        h3 {
+            margin-top: 40px;
+            font-size: 1.4rem;
+            color: #4f7cff;
+        }
+
+        /* ===== 画像 ===== */
+        img {
+            border-radius: 12px;
+            margin: 25px 0;
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            animation: imgFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes imgFloat {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* ===== 横並び画像 ===== */
+        .image-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-row img {
+            width: 40%;
+            animation: none;
+        }
+
+        /* ===== フッター・リンク ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            margin-top: 40px;
+        }
+
+        ul.link-list {
+            list-style: none;
+            padding: 0;
+            margin: 40px auto 60px;
+            max-width: 900px;
+        }
+
+        ul.link-list li {
+            margin: 12px 0;
+        }
+
+        ul.link-list a {
+            color: #3f6fff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #3f6fff66;
+            padding-bottom: 4px;
+            transition: 0.3s;
+        }
+
+        ul.link-list a:hover {
+            color: #1f4fff;
+            border-color: #1f4fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Design for others</h1>
+</header>
+
+<div class="container">
+
+    <h2>対象</h2>
+    私たちの班では<br>
+    <strong>”夜中に公園でお酒を片手にビデオ通話をして大声で笑っている会社員”</strong><br>
+    にしてあげられることを考えることにした。
+
+    <h2>作品</h2>
+
+    <h3>POV</h3>
+    <img src="../images/POV.png" width="45%">
+
+    <h3>HMV</h3>
+    <img src="../images/han an.png" width="45%">
+
+    <div>
+        班内での話し合いの結果、この会社員は公園であぐらをかき、すみっこでビデオ通話をしていることから、<br>
+        子供の頃に戻ること（自分を解放できる場所）、癒しを求めているのではないかと考えた。<br>
+        私はこの結果をもとに<strong>リラックスかつ、子供の頃を思い出せる空間</strong>を作ることにした。
+    </div>
+
+    <div>
+        自分の中で子供の頃にワクワクすることを考えた結果、私が子供の頃によく作ったかまくらを公園の遊具として<br>
+        リラックスできる空間にしようと思った。
+    </div>
+
+    <img src="../images/sesign.png" width="20%">
+
+    <div>下の画像が完成したものです。</div>
+
+    <div class="image-row">
+        <img src="../images/madori.png" width="20%">
+        <img src="../images/iguru.png" width="20%">
+    </div>
+
+    <div>
+        内装は仕切り以外にものを置かないことで各々がしたいことに向き合うことができると考えた。<br>
+        癒し空間という面でもかまくらの中はドーム状なのである程度の声量も抑えられる。
+    </div>
+
+    <h3>使用機材</h3>
+    <div>3Dプリンター</div>
+
+</div>
+
+<ul class="link-list">
+    <li><a href="https://sites.google.com/view/digitalfabrication25/design-for-others" target="_blank">yuiriさんのDesign For Others</a></li>
+    <li><a href="https://202501902.github.io/xbp/digi_fab/digifab4.design.html" target="_blank">やぎさんのDesign For Others</a></li>
+</ul>
+
+
+
+</body>
+</html>
