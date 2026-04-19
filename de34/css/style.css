@@ -173,9 +173,236 @@ footer {
   border-radius: 8px;
 }
 
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+  margin: 0;
+  padding: 20px;
+  line-height: 1.8;
+  color: #333;
+}
 
+/* 全体をカード風に */
+.about-page {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
+/* 見出し */
+h1 {
+  border-left: 8px solid #4a90e2;
+  padding-left: 10px;
+  margin-top: 40px;
+  color: #2c3e50;
+}
 
+h2 {
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  color: #34495e;
+}
+
+/* テキスト */
+div {
+  margin: 10px 0;
+}
+
+/* リスト */
+ul {
+  background: #f5f9ff;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* 画像 */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* 注釈 */
+div:last-of-type {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* カード（セクション）をしっかり区切る */
+.card {
+  background: #ffffff;
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 15px;
+
+  /* ここが重要 */
+  border-left: 6px solid #4a90e2;
+
+  /* 立体感 */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  /* 少しだけ浮く演出 */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* ホバーで浮く（オシャレ） */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* セクション同士の区切り線（うっすら） */
+.card + .card {
+  position: relative;
+}
+
+.card + .card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+
+/* 見出しをカード内で整理 */
+.card h1 {
+  margin-top: 0;
+}
+
+.card h2 {
+  margin-top: 10px;
+}
+
+/* ===== 全体背景 ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+}
+
+/* 中央コンテナ */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* タイトル */
+.main-header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* ===== カードデザイン ===== */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+
+  margin: 30px 0;
+  padding: 25px;
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+/* 上のアクセントライン */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #ff7eb3, #65d6ce);
+}
+
+/* ホバーで浮く */
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== 見出し ===== */
+.card h1 {
+  margin-top: 0;
+  color: #4a00e0;
+}
+
+.card h2 {
+  border-left: 5px solid #764ba2;
+  padding-left: 10px;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* ===== テキスト ===== */
+div {
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+/* ===== リスト ===== */
+ul {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* ===== 画像 ===== */
+img {
+  display: block;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+/* 画像ホバー */
+img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== 注釈 ===== */
+div:last-of-type {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .main-header h1 {
+    font-size: 2em;
+  }
+}
 
 
 

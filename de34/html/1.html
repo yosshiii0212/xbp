@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Arduinoのまとめ</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="about-page">
+
+<div class="container">
+
+  <header class="main-header">
+    <h1>Arduino</h1>
+  </header>
+
+  <section class="card">
+    <h2>使用したもの</h2>
+    <div>Arduino UNO</div>
+  </section>
+
+  <section class="card">
+    <h2>Arduinoとは</h2>
+    <div>
+    Arduinoとは、電子工作やプログラミングを体験できる小さなコンピュータである。<br>
+    プログラムを書くことで、センサーの値を読み取ったり、モーターを動かしたりすることができる。
+    </div>
+
+    <ul>
+        <li>センサーで明るさを検知し、暗くなったら電気をつける</li>
+        <li>LEDを点滅させる（Lチカ）</li>
+        <li>ボタンを押したらライトが光る</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Arduinoを動かす</h2>
+    <div>
+    Arduinoを動かすには、プログラムを入力するための開発環境「Arduino IDE」が必要である。<br>
+    Arduino IDEをダウンロードし、ArduinoとPCを接続してプログラムを書き込む。
+    </div>
+  </section>
+
+  <section class="card">
+    <h1>Lチカ</h1>
+    <h2>方法</h2>
+    <div>
+    Lチカとは、LEDを点滅させる基本的なプログラムである。<br>
+    LEDとジャンパー線をブレッドボードに接続し、以下のプログラムを入力する。
+    </div>
+
+    <img src="../images/Ltika.png" width="40%">
+
+    <div>
+    ※ delay(1000); とすると1秒ごとに点滅する。<br>
+    0.1秒にしたい場合は delay(100); とする。
+    </div>
+  </section>
+
+  <section class="card">
+    <h1>センサーで明るさ測定</h1>
+
+    <h2>センサー</h2>
+    <div>
+    CdSセルと10kΩ抵抗、ジャンパー線をブレッドボードに接続し、プログラムを入力する。
+    </div>
+
+    <img src="../images/sennsa.png" width="30%">
+
+    <div>
+    ※ブレッドボードは正しい位置に差し込まないと動作しないため注意する。
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
