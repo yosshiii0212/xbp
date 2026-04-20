@@ -63,3 +63,198 @@ span.blackback{
   box-shadow: 0 14px 35px rgba(80, 100, 80, 0.25);
 }
 
+
+  * {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #F9F7F1; /* クリーム色 */
+    color: #3A3A3A; /* 優しいダークグレー */
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  header h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #4B6E4B; /* 落ち着いたグリーン */
+  }
+
+  header p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #6E7F6E; /* 柔らかいグレーグリーン */
+    margin-top: 8px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background: #FFFFFF; /* 白 */
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(100, 120, 100, 0.15);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(80, 100, 80, 0.25);
+  }
+
+  .card h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #2E4D2E; /* 濃いグリーン */
+  }
+
+  .card p {
+    font-weight: 300;
+    line-height: 1.5;
+    color: #505050; /* ミディアムグレー */
+  }
+
+  footer {
+    text-align: center;
+    margin: 60px 0 30px;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #8B8B8B; /* 優しいグレー */
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .card {
+      padding: 20px;
+    }
+  }
+ 
+
+/* フォント */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+
+/* ========== 全体デザイン ========== */
+html, body {
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+}
+
+/* 見出し */
+h3 {
+    margin-left: 2em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+/* 文章 */
+p {
+    margin-left: 3em;
+    line-height: 1.8;
+}
+
+/* コンテナ */
+div {
+    margin-top: 1.5em;
+    margin-left: 3em;
+}
+
+/* 強調テキスト */
+span.blackback {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+}
+
+/* ========== ロゴ ========== */
+logo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+logo img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* 小さいロゴ */
+logotohome img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+logotohome img:hover {
+    transform: scale(1.1);
+}
+
+/* ========== カードデザイン ========== */
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    margin: 20px;
+    backdrop-filter: blur(10px); /* ガラス風 */
+    transition: all 0.3s ease;
+}
+
+/* ホバーで浮かせる */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== ちょいおしゃれなアニメーション ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.8s ease;
+}
+

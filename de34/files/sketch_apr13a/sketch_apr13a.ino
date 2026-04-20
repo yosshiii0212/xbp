@@ -1,24 +1,42 @@
-#include <Adafruit_NeoPixel.h>
-#define PIN        9 // 信号用のピンを指定
-#define NUMPIXELS 5 // LEDの数を指定
-int brightness=50;//明るさ
+const int stepPin = 9;
+const int dirPin = 8;
+const int sensorPin = A0;
 
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+int sensorValue = 0;
+int threshold = 800;  // ←ここは実際に調整する
+
+bool stopped = false;
 
 void setup() {
-  pixels.begin(); // NeoPixel出力ピンの初期化
-  pixels.setBrightness(brightness);
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  digitalWrite(dirPin, HIGH); // 回転方向固定
+
+  Serial.begin(6000);
 }
 
 void loop() {
-  pixels.clear(); // すべてのLEDの色を0にセット
+  sensorValue = analogRead(sensorPin);
+  Serial.println(sensorValue);
 
-  for(int i=0; i<NUMPIXELS; i++) {
-    int r = random(256);
-    int g = random(256);
-    int b = random(256);
-    pixels.setPixelColor(i, pixels.Color(r, g, b));
-    pixels.show();
-    delay(70);
+  if (!stopped) {
+    // 回転処理
+    digitalWrite(stepPin, HIGH);
+    delayMicroseconds(800);
+    digitalWrite(stepPin, LOW);
+    delayMicroseconds(750);
+
+    // センサー判定
+    if (sensorValue > threshold) {
+      stopped = true;
+
+      // 徐々に止める（ルーレット感）
+      for (int d = 800; d < 3000; d += 50) {
+        digitalWrite(stepPin, HIGH);
+        delayMicroseconds(d);
+        digitalWrite(stepPin, LOW);
+        delayMicroseconds(d);
+      }
+    }
   }
 }
