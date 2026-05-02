@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>よし　Flask課題</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>@charset "utf-8";
+
+/* フォント */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+
+/* ===== 全体 ===== */
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    color: #333;
+}
+
+/* ===== タイトル ===== */
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+    letter-spacing: 2px;
+}
+
+/* ===== 見出し ===== */
+h2 {
+    border-left: 6px solid #6ec1e4;
+    padding-left: 10px;
+    margin-top: 40px;
+    color: #444;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #666;
+}
+
+/* ===== テキスト ===== */
+p {
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* ===== リスト ===== */
+ul {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== コードブロック ===== */
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+/* ===== リンク ===== */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== セクションカード風 ===== */
+h2, p, ul, pre {
+    animation: fadeIn 0.8s ease;
+}
+
+/* ===== 軽いアニメーション ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 全体をカードっぽく ===== */
+body > * {
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== ホバーで少し浮く ===== */
+body > *:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+/* preだけカード効果を外す */
+body > *:not(pre) {
+    background: rgba(255,255,255,0.85);
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+pre {
+    background: #1e1e1e;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+</style>
+
+</head>
+
+<div class="section">
+<h1>Flask</h1>
+<P>FlaskとはPythonでWebアプリケーションを作るための軽量なフレームワークであり、<br>
+    初心者や学習用として向いている。
+    </P>
+    <h3>基本構成</h3>
+    <ul>
+        <li>ルーディング（URLと処理の対応）</li>
+        <li>テンプレート（HTML表示）</li>
+        <li>リクエスト処理（GET/POST）</li>
+        <li>静的ファイル（CSS・画像など）</li>
+    </ul>
+<h2>使用例</h2>
+  <pre>
+    <code>from flask import Flask, render_template, request, session, redirect,flash, url_for
+from csv import reader
+
+app = Flask(__name__)
+
+# 編集ゾーンーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+##ここでルートのURLが指定された時に実行される
+@app.route('/')
+def index():
+    #index.htmlがレンダリングされる
+    with open('./mmcsv.csv', 'r', encoding="utf-8") as csv_file:
+        csv_reader = reader(csv_file)
+        list_mm = list(csv_reader)
+
+    for data in list_mm:
+        data[3] = "https://www.google.com/maps?q=" + data[3].replace("(","").replace(")","").replace(" ","")
+
+    print(list_mm)
+    return render_template("index.html",mmlist=list_mm)
+
+# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+if __name__ == '__main__':
+    app.run()
+    </code>
+</pre>
+<p>※__name__とはPythonに存在する特別な変数で、<br>
+    このファイルがどこから実行されているかをFlaskに伝えるものである。</p>
+
+
+<pre><code><!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>flaskテスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+        <div>
+        {% for data in mmlist %}
+            {% if data[1]=="場所" %}
+                {{ data[1] }} <br>
+            {% else %}
+                <a href={{ data[3] }} target="_blank">{{ data[1] }}</a><br>
+            {% endif%}
+        {% endfor %}
+        
+    </div>
+
+
+
+</body>
+</html></code></pre>
+    <p>PythonのこのコマンドとHTMLでの情報の入力とcsvファイルでリンクを押すとマップに飛ぶことができる</p>
+
+</div>
+
+<div class="section">
+        <h2>フロントエンドとバックエンド</h2>
+    <p>アプリケーションなどを作成するにあたってフロントエンドとバックエンドが存在する。</p>
+</div>
+
+<div class="section">
+    <h3>フロントエンド</h3>
+    <p>ユーザーの目に見える情報</p>
+    <ul>
+        <li>Webページのデザイン（ボタン・文字・画像）</li>
+        <li>CSS（見た目・デザイン）</li>
+        <li>JavaScript（動き・インタラクション）</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h3>バックエンド</h3>
+    <p>ユーザーから見えない裏側の処理</p>
+
+
+<ul>
+    <li>ログイン情報のチェック</li>
+    <li>サーバー処理</li>
+    <li>データベースへの保存</li>
+</ul>
+
+<p>※Flaskではバックエンドをしている。</p>
+
+</div>
+
+<div class="section">
+<h2>データベース</h2>
+    <p>データベースとは、バックエンドがデータを保存・取得するために使う外部の記録場所のことである。</p>
+</div>

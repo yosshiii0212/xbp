@@ -407,4 +407,112 @@ div:last-of-type {
 
 
 
+/* フォント */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+
+/* ===== 全体 ===== */
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    color: #333;
+}
+
+/* ===== タイトル ===== */
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+    letter-spacing: 2px;
+}
+
+/* ===== 見出し ===== */
+h2 {
+    border-left: 6px solid #6ec1e4;
+    padding-left: 10px;
+    margin-top: 40px;
+    color: #444;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #666;
+}
+
+/* ===== テキスト ===== */
+p {
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* ===== リスト ===== */
+ul {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== コードブロック ===== */
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+/* ===== リンク ===== */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== セクションカード風 ===== */
+h2, p, ul, pre {
+    animation: fadeIn 0.8s ease;
+}
+
+/* ===== 軽いアニメーション ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 全体をカードっぽく ===== */
+body > * {
+    background: rgba(255,255,255,0.85);
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== ホバーで少し浮く ===== */
+body > *:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
 
