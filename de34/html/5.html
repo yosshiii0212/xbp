@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>よし　DBについて</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>@charset "utf-8";
+
+/* フォント */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+
+/* ===== 全体 ===== */
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    color: #333;
+}
+
+/* ===== タイトル ===== */
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+    letter-spacing: 2px;
+}
+
+/* ===== 見出し ===== */
+h2 {
+    border-left: 6px solid #6ec1e4;
+    padding-left: 10px;
+    margin-top: 40px;
+    color: #444;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #666;
+}
+
+/* ===== テキスト ===== */
+p {
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* ===== リスト ===== */
+ul {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== コードブロック ===== */
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+/* ===== リンク ===== */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== セクションカード風 ===== */
+h2, p, ul, pre {
+    animation: fadeIn 0.8s ease;
+}
+
+/* ===== 軽いアニメーション ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 全体をカードっぽく ===== */
+body > * {
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== ホバーで少し浮く ===== */
+body > *:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+/* preだけカード効果を外す */
+body > *:not(pre) {
+    background: rgba(255,255,255,0.85);
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+pre {
+    background: #1e1e1e;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>DBについて</h1>
+
+    <div class="section">
+        <h2>言葉の意味</h2>    
+            <h3>テーブル</h3>
+                <p>Excelで言うとシートの部分でデータをまとめる場所の役割のことだ。</p>
+            <h3>フィールド</h3>
+                <p>Excelで言うと列（カラム）の部分でデータの項目の部分を言う。</p>
+            <h3>レコード</h3>
+                <p>Excelで言うと行の部分で、1件分の項目のことである。</p>
+            <h3>クエリ</h3>
+                <p>クエリとは、「データベースに対する質問」 のこと。</p>
+
+                <p>テーブル＝ データを保存している場所    <br>
+                　　クエリ＝ そのデータを探したり組み合わせたりする命令</p>
+                <p>この2つを組み合わせてサービスを作り出す</p>
+            <h3>リレーション</h3>
+                <p>リレーションとは、「テーブル同士のつながり」のこと。<br>
+                    DBでは、テーブルをバラバラに作るだけでは意味がなく、<br>
+                    「この注文は誰のもの？」<br>
+                    「このレビューはどの商品？」<br>
+                    「このお気に入りは誰が登録した？」を結びつける必要がある。<br>
+                    その“つながり”がリレーションである。</p>
+    </div>
+
+
+
+
